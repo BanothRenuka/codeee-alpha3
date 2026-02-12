@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alpha Project Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📌 Alpha Project Manager</h1>
+    <input type="text" id="project-name" placeholder="New Project Name">
+    <button onclick="createProject()">Create Project</button>
+</header>
+
+<main>
+    <div id="projects-container" class="projects"></div>
+</main>
+
+<!-- Task Modal -->
+<div id="task-modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="task-title"></h3>
+        <p><strong>Assigned To:</strong> <span id="task-assignee"></span></p>
+
+        <div id="task-comments"></div>
+
+        <input type="text" id="new-comment" placeholder="Add a comment">
+        <button onclick="addComment()">Comment</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
